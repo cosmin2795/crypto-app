@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CryptocurrencyApp</string>
+    <string name="team_members">Team members</string>
+    <string name="tags">Tags</string>
+    <string name="active">active</string>
+    <string name="inactive">inactive</string>
+</resources>

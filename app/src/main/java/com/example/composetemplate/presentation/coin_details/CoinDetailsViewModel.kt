@@ -12,10 +12,6 @@ import javax.inject.Inject
 class CoinDetailsViewModel @Inject constructor(val getCoinDetailsUseCase: GetCoinDetailsUseCase) :
     ViewModel() {
 
-    init {
-
-    }
-
     private val _state = mutableStateOf(CoinDetailsState())
     val state: State<CoinDetailsState>
         get() = _state

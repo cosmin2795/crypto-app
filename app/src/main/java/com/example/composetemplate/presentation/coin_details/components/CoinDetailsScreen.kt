@@ -12,15 +12,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.composetemplate.R
-import com.example.composetemplate.data.remote.dto.TeamMember
-import com.example.composetemplate.domain.model.CoinDetails
 import com.example.composetemplate.presentation.coin_details.CoinDetailsViewModel
 import com.example.composetemplate.utils.theme.Background
-import com.example.composetemplate.utils.theme.ComposeTemplateTheme
 import com.google.accompanist.flowlayout.FlowRow
 import com.ramcosta.composedestinations.annotation.Destination
 
@@ -82,36 +78,5 @@ fun CoinDetailsScreen(
                     )
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewCoinList() {
-    ComposeTemplateTheme {
-        val coin = CoinDetails( // for testing
-            "1", "CoinBit",
-            "Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.",
-            "BTC",
-            1,
-            false,
-            listOf(
-                "Money",
-                "SmartContracts",
-                "Digital Gold",
-                "Mining",
-                "Btc",
-                "Satoshi",
-                "SmartContracts",
-                "Digital Gold",
-                "Mining",
-                "Btc",
-                "Satoshi"
-            ),
-            listOf(
-                TeamMember("1", "JAck", "CTO"), TeamMember("1", "Sparrow", "Developer"),
-                TeamMember("1", "Jacobs", "QA Officer")
-            )
-        )
     }
 }

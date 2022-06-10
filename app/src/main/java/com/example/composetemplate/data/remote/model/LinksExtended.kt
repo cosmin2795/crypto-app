@@ -1,4 +1,4 @@
-package com.example.composetemplate.data.remote.dto
+package com.example.composetemplate.data.remote.model
 
 data class LinksExtended(
     val stats: Stats,

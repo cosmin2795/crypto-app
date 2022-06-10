@@ -1,6 +1,6 @@
 package com.example.composetemplate.domain.model
 
-import com.example.composetemplate.data.remote.dto.TeamMember
+import com.example.composetemplate.data.remote.model.TeamMember
 
 data class CoinDetails(
     val coinId: String,

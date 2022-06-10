@@ -1,9 +1,9 @@
-package com.example.composetemplate.data.remote.dto
+package com.example.composetemplate.data.remote.model
 
 import com.example.composetemplate.domain.model.CoinDetails
 import com.google.gson.annotations.SerializedName
 
-data class CoinDetailsDto(
+data class CoinDetailsRemote(
     val description: String,
     @SerializedName("development_status")
     val developmentStatus: String,
@@ -41,7 +41,7 @@ data class CoinDetailsDto(
     val whitepaper: Whitepaper
 )
 
-fun CoinDetailsDto.toDomain(): CoinDetails {
+fun CoinDetailsRemote.toDomain(): CoinDetails {
     return CoinDetails(
         coinId = id,
         name = name,

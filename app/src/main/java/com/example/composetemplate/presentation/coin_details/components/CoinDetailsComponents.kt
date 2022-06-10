@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.composetemplate.data.remote.dto.TeamMember
+import com.example.composetemplate.data.remote.model.TeamMember
 import com.example.composetemplate.domain.model.CoinDetails
 import com.example.composetemplate.utils.theme.Background
 import com.example.composetemplate.utils.theme.Blue

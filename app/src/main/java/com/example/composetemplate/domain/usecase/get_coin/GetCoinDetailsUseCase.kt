@@ -1,6 +1,6 @@
 package com.example.composetemplate.domain.usecase.get_coin
 
-import com.example.composetemplate.data.remote.dto.toDomain
+import com.example.composetemplate.data.remote.model.toDomain
 import com.example.composetemplate.domain.model.Coin
 import com.example.composetemplate.domain.model.CoinDetails
 import com.example.composetemplate.domain.repository.CoinRepository

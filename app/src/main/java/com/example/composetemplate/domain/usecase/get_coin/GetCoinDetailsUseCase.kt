@@ -12,6 +12,7 @@ import javax.inject.Inject
 
 class GetCoinDetailsUseCase @Inject constructor(private val coinRepository: CoinRepository) {
 
+    //todo move this in repo and use LocalDataSource
     operator fun invoke(coinId: String): Flow<Outcome<CoinDetails>> = flow {
         try {
             emit(Outcome.Loading(true))

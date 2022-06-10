@@ -22,14 +22,18 @@ fun CoinListScreen(
 ) {
     val state = viewModel.state
     Box(modifier = Modifier.fillMaxSize()) {
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Background)
-        ) {
-            items(state.coinList) { coin ->
-                CoinItem(coin = coin) { coinId ->
-                    destinationsNavigator.navigate(CoinDetailsScreenDestination(coinId))
+        if (state.errorMessage.isNotEmpty()) {
+            Error(state.errorMessage)
+        } else {
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Background)
+            ) {
+                items(state.coinList) { coin ->
+                    CoinItem(coin = coin) { coinId ->
+                        destinationsNavigator.navigate(CoinDetailsScreenDestination(coinId))
+                    }
                 }
             }
         }

@@ -28,10 +28,14 @@ class CoinRepositoryImpl @Inject constructor(
             coinLocalSource.insertCoins(remoteCoins.map(CoinRemote::toLocal))
             val localCoins = coinLocalSource.getAllCoins()
             emit(Outcome.Success(localCoins.map(CoinLocal::toDomain)))
+            //throw IOException() used for testing
         } catch (ex: IOException) {
-            emit(Outcome.Error("No internet connection"))
-        } finally {
-            emit(Outcome.Loading(false))
+            if (coinLocalSource.getAllCoins().isNotEmpty()) // check if any records in db
+                emit(Outcome.Success(coinLocalSource.getAllCoins().map(CoinLocal::toDomain)))
+            else
+                emit(Outcome.Error("No internet connection"))
+        } catch (ex: Exception) {
+            emit(Outcome.Error("Something went wrong :("))
         }
     }
 
